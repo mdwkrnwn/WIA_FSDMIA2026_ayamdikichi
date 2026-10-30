@@ -1607,3 +1607,230 @@ svg {
     grid-template-columns: 1fr;
   }
 }
+
+/* Maps */
+
+/* Page Header Section */
+.pm-head {
+  padding: var(--s5) 0 var(--s3);
+}
+
+.pm-head p {
+  color: var(--muted);
+  margin-top: var(--s1);
+}
+
+/* Page Layout Grid */
+.pm {
+  display: grid;
+  grid-template-columns: 340px minmax(0, 1fr);
+  grid-template-areas:
+    "f m"
+    "p m";
+  grid-template-rows: auto 1fr;
+  gap: var(--s3);
+  padding-bottom: var(--s8);
+  align-items: start;
+}
+
+.pm-f {
+  grid-area: f;
+  overflow: hidden;
+}
+
+.pm-m {
+  grid-area: m;
+  overflow: hidden;
+  position: sticky;
+  top: 88px;
+}
+
+.pm-p {
+  grid-area: p;
+  overflow: hidden;
+}
+
+/* Filter Summary & Form */
+.pm-f summary {
+  padding: var(--s2) var(--s3);
+  font: 700 18px var(--ff-h);
+  cursor: pointer;
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+}
+
+.pm-fb {
+  padding: 0 var(--s3) var(--s3);
+  display: grid;
+  gap: var(--s2);
+}
+
+.pm-fb fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.pm-fb legend {
+  font: 600 14px var(--ff-b);
+  margin-bottom: 8px;
+  padding: 0;
+}
+
+/* Filter Chips */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  min-height: 44px;
+  padding: 0 14px;
+  border: 1px solid #CBD5E1;
+  border-radius: var(--r-pill);
+  background: #fff;
+  font: 500 14px var(--ff-b);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.chip[aria-pressed="true"] {
+  background: var(--blue-50);
+  border-color: var(--blue);
+  color: var(--blue-dark);
+  font-weight: 600;
+}
+
+.chip[aria-pressed="true"]::before {
+  content: "✓ ";
+}
+
+.count {
+  font-weight: 600;
+}
+
+/* Map Markers */
+#map svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.mk {
+  cursor: pointer;
+}
+
+.mk:focus {
+  outline: none;
+}
+
+.mk:focus-visible .halo {
+  stroke: #0F172A;
+  stroke-width: 3;
+  fill: none;
+  r: 20px;
+}
+
+/* Map Legend */
+.legend {
+  display: flex;
+  gap: var(--s1) var(--s3);
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: var(--s2) var(--s3);
+  border-top: 1px solid var(--border);
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.legend li {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.legend i {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+/* Selected Report Sidebar / Preview */
+.pv-body {
+  padding: var(--s3);
+  display: grid;
+  gap: var(--s1);
+}
+
+.pv-body h2 {
+  font-size: 18px;
+}
+
+.pv-body .small {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.pm-p .thumb {
+  aspect-ratio: 16/7;
+}
+
+.pv-id {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.pv-empty {
+  padding: var(--s4) var(--s3);
+  text-align: center;
+  color: var(--muted);
+}
+
+/* Responsive Media Queries Specific to peta.html */
+@media (max-width: 900px) {
+  .pm {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "f"
+      "m"
+      "p";
+    grid-template-rows: none;
+  }
+
+  .pm-m {
+    position: static;
+  }
+
+  .pm-f summary::after {
+    content: "▾";
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .mk circle {
+    transform: scale(1.6);
+    transform-box: fill-box;
+    transform-origin: center;
+  }
+
+  .pm-p .thumb {
+    display: none;
+  }
+}
+
+@media (min-width: 901px) {
+  .pm-f summary {
+    pointer-events: none;
+  }
+
+  .pm-f summary::marker {
+    content: "";
+  }
+}
