@@ -186,7 +186,7 @@ export default function LaporanPage() {
                     </svg>
                     26 Okt 2026
                   </span>
-                  <Link href="/detail-laporan">Lihat detail</Link>
+                  <Link href="/laporan/detail">Lihat detail</Link>
                 </div>
               </div>
             </article>
@@ -297,7 +297,7 @@ export default function LaporanPage() {
                     </svg>
                     25 Okt 2026
                   </span>
-                  <Link href="/detail-laporan">Lihat detail</Link>
+                  <Link href="/laporan/detail">Lihat detail</Link>
                 </div>
               </div>
             </article>
@@ -413,7 +413,7 @@ export default function LaporanPage() {
                     </svg>
                     22 Okt 2026
                   </span>
-                  <Link href="/detail-laporan">Lihat detail</Link>
+                  <Link href="/laporan/detail">Lihat detail</Link>
                 </div>
               </div>
             </article>
@@ -526,7 +526,7 @@ export default function LaporanPage() {
                     </svg>
                     18 Okt 2026
                   </span>
-                  <Link href="/detail-laporan">Lihat detail</Link>
+                  <Link href="/laporan/detail">Lihat detail</Link>
                 </div>
               </div>
             </article>
@@ -638,7 +638,7 @@ export default function LaporanPage() {
                     </svg>
                     14 Okt 2026
                   </span>
-                  <Link href="/detail-laporan">Lihat detail</Link>
+                  <Link href="/laporan/detail">Lihat detail</Link>
                 </div>
               </div>
             </article>
@@ -753,7 +753,7 @@ export default function LaporanPage() {
                     </svg>
                     12 Okt 2026
                   </span>
-                  <Link href="/detail-laporan">Lihat detail</Link>
+                  <Link href="/laporan/detail">Lihat detail</Link>
                 </div>
               </div>
             </article>
