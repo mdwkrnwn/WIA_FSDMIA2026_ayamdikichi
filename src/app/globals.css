@@ -1834,3 +1834,354 @@ svg {
     content: "";
   }
 }
+
+/* Transparansi */
+/* Dashboard / Transparency Data Panels */
+.dp {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: var(--s3);
+  min-width: 0;
+}
+
+.dp h2 {
+  font-size: 18px;
+}
+
+.dp .sub {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 4px 0 var(--s2);
+}
+
+/* KPI Cards Grid */
+.kpis {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+}
+
+.kpi {
+  background: #fff;
+  padding: var(--s3);
+}
+
+.kpi span {
+  font-size: 14px;
+  color: var(--muted);
+  display: block;
+}
+
+.kpi strong {
+  display: block;
+  font: 800 32px/1.15 var(--ff-h);
+  letter-spacing: -.02em;
+  margin: 4px 0;
+}
+
+.kpi small {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.kpi.warn strong {
+  color: var(--bad);
+}
+
+.kpi.pend strong {
+  color: var(--warn);
+}
+
+/* Section Layouts & Grids */
+.dsec {
+  margin-top: var(--s5);
+}
+
+.dsec>h2 {
+  font-size: 24px;
+  margin-bottom: var(--s2);
+}
+
+.g21 {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  gap: var(--s3);
+  align-items: start;
+}
+
+.g11 {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: var(--s3);
+  align-items: start;
+}
+
+.g3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--s3);
+  align-items: start;
+}
+
+/* Charts & Legends */
+.chart {
+  overflow-x: auto;
+}
+
+.chart svg {
+  display: block;
+  min-width: 520px;
+  width: 100%;
+  height: auto;
+}
+
+.leg {
+  display: flex;
+  gap: var(--s2);
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0 0 var(--s1);
+  padding: 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.leg i {
+  display: inline-block;
+  width: 14px;
+  height: 4px;
+  border-radius: 2px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+/* Progress Bars */
+.bars {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 16px;
+}
+
+.bars li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 4px 12px;
+  font-size: 14px;
+}
+
+.bars b {
+  font-weight: 600;
+}
+
+.bars .track {
+  grid-column: 1/-1;
+  height: 10px;
+  background: var(--bg);
+  border-radius: var(--r-pill);
+  position: relative;
+  border: 1px solid var(--border);
+}
+
+.bars .fill {
+  display: block;
+  height: 100%;
+  border-radius: var(--r-pill);
+}
+
+.bars .tick {
+  position: absolute;
+  top: -4px;
+  bottom: -4px;
+  width: 2px;
+  background: var(--navy);
+}
+
+/* Table Enhancements & Mini Visual Indicators */
+.twrap {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  background: #fff;
+}
+
+.twrap .tbl {
+  min-width: 760px;
+}
+
+.tbl td a {
+  font-weight: 600;
+}
+
+.tbl td small {
+  display: block;
+  color: var(--muted);
+}
+
+.tbl .num {
+  text-align: right;
+}
+
+.mini {
+  display: block;
+  height: 6px;
+  border-radius: var(--r-pill);
+  background: var(--blue);
+  margin-top: 4px;
+}
+
+/* Toolbar & Sorting */
+.toolbar {
+  display: flex;
+  gap: var(--s2);
+  flex-wrap: wrap;
+  align-items: end;
+  margin-bottom: var(--s2);
+}
+
+.toolbar .field {
+  min-width: 170px;
+  flex: 1 1 170px;
+  max-width: 320px;
+}
+
+.sortbtn {
+  all: unset;
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--muted);
+  font-size: 13px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.sortbtn:focus-visible {
+  outline: 3px solid var(--blue);
+}
+
+th[aria-sort="ascending"] .sortbtn::after {
+  content: "▲";
+  font-size: 10px;
+}
+
+th[aria-sort="descending"] .sortbtn::after {
+  content: "▼";
+  font-size: 10px;
+}
+
+/* Page Header & Transparency Hero */
+.th {
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  padding: var(--s5) 0 var(--s4);
+}
+
+.th h1 {
+  font-size: clamp(30px, 4.2vw, 48px);
+  max-width: 760px;
+}
+
+.th .lead {
+  margin-top: var(--s2);
+  max-width: 680px;
+}
+
+.tmeta {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--s3);
+  margin: var(--s3) 0 0;
+  padding-top: var(--s3);
+  border-top: 1px solid var(--border);
+}
+
+.tmeta dt {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.tmeta dd {
+  margin: 2px 0 0;
+  font-weight: 600;
+}
+
+.tp {
+  padding-bottom: var(--s10);
+}
+
+/* Methodology Section */
+.meth {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--s3);
+}
+
+.meth h3 {
+  font-size: 17px;
+  margin-bottom: var(--s1);
+}
+
+.meth ul {
+  margin: 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 8px;
+  font-size: 15px;
+  color: var(--muted);
+}
+
+.meth li b {
+  color: var(--text);
+}
+
+.dsec .intro {
+  color: var(--muted);
+  margin: -8px 0 var(--s2);
+  max-width: 640px;
+}
+
+/* Responsive Media Queries Specific to transparansi.html */
+@media (max-width: 1000px) {
+
+  .g21,
+  .g11,
+  .g3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 1360px) {
+  .kpis {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+
+  .tmeta,
+  .meth {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .kpis {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .kpi {
+    padding: var(--s2);
+  }
+
+  .kpi strong {
+    font-size: 26px;
+  }
+}
