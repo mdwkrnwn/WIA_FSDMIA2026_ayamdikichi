@@ -9,7 +9,7 @@ import {
 
 const reports = [
   {
-    image: "/assets/laporan-jalan.jpg",
+    image: "/assets/images/png/lubang.jpg",
     imageAlt: "Lubang besar pada permukaan jalan",
     category: "Infrastruktur Jalan",
     status: "Diproses",
@@ -20,7 +20,7 @@ const reports = [
     href: "/detail-laporan",
   },
   {
-    image: "/assets/laporan-drainase.jpg",
+    image: "/assets/images/png/saluran.jpg",
     imageAlt: "Sampah menumpuk di saluran drainase",
     category: "Drainase",
     status: "Selesai",
@@ -31,7 +31,7 @@ const reports = [
     href: "/detail-laporan-selesai",
   },
   {
-    image: "/assets/laporan-pju.jpg",
+     image: "/assets/images/png/lampu.jpg",
     imageAlt: "Lampu penerangan jalan pada malam hari",
     category: "Penerangan Jalan",
     status: "Diterima",
